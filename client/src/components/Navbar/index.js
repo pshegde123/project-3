@@ -14,10 +14,10 @@ function Navbar() {
                         <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Link1</a>
+                        <a className="nav-link" href="/platforms">Platforms</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Link2</a>
+                        <a className="nav-link" href="/genre">Genre</a>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
