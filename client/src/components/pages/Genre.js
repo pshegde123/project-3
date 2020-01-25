@@ -5,6 +5,7 @@ import {
         Card, Button, CardImg, CardTitle, CardText, CardColumns,
         CardSubtitle, CardBody, CardImgOverlay
 } from 'reactstrap';
+import API from '../../utils/API';
 
 import GenreCard from "../GenreCard";
 
@@ -14,16 +15,7 @@ class Genre extends Component {
         }
 
         componentDidMount() {
-                axios({
-                        "method": "GET",
-                        "url": "https://rawg-video-games-database.p.rapidapi.com/genres",
-                        "headers": {
-                                "content-type": "application/octet-stream",
-                                "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
-                                "x-rapidapi-key": "91048f5edcmshbb3ad5482ca6475p1f5763jsn3f223f4eabf9"
-                        }
-                })
-                        .then((response) => {
+                        API.getAllGenres().then((response) => {
                                 this.setState({ genres: response.data.results })
                         })
                         .catch((error) => {
