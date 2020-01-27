@@ -5,8 +5,7 @@ import GenreCard from "../GenreCard";
 
 class Genre extends Component {
         state = {
-                genres: [],
-                description: ''
+                genres: []
         }
 
         componentDidMount() {
