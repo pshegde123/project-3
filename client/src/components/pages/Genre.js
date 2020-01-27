@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import axios from 'axios';
-import { CardDeck, Container, Row, Col } from 'reactstrap';
-import {
-        Card, Button, CardImg, CardTitle, CardText, CardColumns,
-        CardSubtitle, CardBody, CardImgOverlay
-} from 'reactstrap';
-
+import { CardColumns } from 'reactstrap';
+import API from '../../utils/API';
 import GenreCard from "../GenreCard";
 
 class Genre extends Component {
@@ -14,35 +9,32 @@ class Genre extends Component {
         }
 
         componentDidMount() {
-                axios({
-                        "method": "GET",
-                        "url": "https://rawg-video-games-database.p.rapidapi.com/genres",
-                        "headers": {
-                                "content-type": "application/octet-stream",
-                                "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
-                                "x-rapidapi-key": "91048f5edcmshbb3ad5482ca6475p1f5763jsn3f223f4eabf9"
-                        }
+                API.getAllGenres().then((response) => {
+                        this.setState({ genres: response.data.results })
                 })
-                        .then((response) => {
-                                this.setState({ genres: response.data.results })
-                        })
                         .catch((error) => {
                                 console.log(error)
                         })
         }
 
-        render() {
-                return (
-                        <CardColumns>
-                                        {this.state.genres.map(genre => <GenreCard
-                                                id={genre.id}
-                                                name={genre.name}
-                                                games_count={genre.games_count}
-                                                image={genre.image_background}
-                                        />)}
-                        </CardColumns>
-                );
-        }
+render() {
+        return (
+                <CardColumns>
+                        {this.state.genres.map(genre => <GenreCard
+                                id={genre.id}
+                                name={genre.name}
+                                games_count={genre.games_count}
+                                image={genre.image_background}
+                                top_one={genre.games[0].name}
+                                top_one_users={genre.games[0].added}
+                                top_two={genre.games[1].name}
+                                top_two_users={genre.games[1].added}
+                                top_three={genre.games[2].name}
+                                top_three_users={genre.games[2].added}
+                        />)}
+                </CardColumns>
+        );
+}
 };
 
 export default Genre;
