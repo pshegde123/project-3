@@ -11,6 +11,7 @@ function GameCard(props) {
     for (let iter = 0; iter < platforms.length; iter++) {
         names[iter] = platforms[iter].platform.name;
     }
+
     return (
         <Card>
             <ReactPlayer
@@ -25,9 +26,7 @@ function GameCard(props) {
                 <CardTitle style={{ fontSize: '25px' }}>{props.name}</CardTitle>
                 <CardSubtitle><li>Ratings: {props.rating}</li><li>MetaScrore:{props.metascore}</li></CardSubtitle>
                 <CardText>
-                    {names.map(name =>
-                        <FontAwesomeIcon icon={['fab', 'windows']}/>
-                    )}
+                    <li>Platforms: {names.join(" , ")}</li>
                 </CardText>
                 <Button>+{props.users}</Button>
             </CardBody>
