@@ -12,19 +12,31 @@ const items = [
   {
     src: 'https://media.rawg.io/media/games/0ea/0ea05d4703f3af63a570471fbad79d40.jpg',
     altText: '',
-    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption: '',
     caption2: ''
   },
   {
     src: 'https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg',
     altText: '',
-    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption: '',
+    caption2: ''
+  },
+  {
+    src: 'https://media.rawg.io/media/games/e9c/e9cbc91e2090638ddab6ae0b3d334f90.jpg',
+    altText: '',
+    caption: '',
+    caption2: ''
+  },
+  {
+    src: 'https://media.rawg.io/media/games/ded/dedd631793c5666ffab9ef03975eb226.jpg',
+    altText: '',
+    caption: '',
     caption2: ''
   },
   {
     src: 'https://media.rawg.io/media/games/23d/23d78acedbb5f40c9fb64e73af5af65d.jpg',
     altText: '',
-    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption: '',
     caption2: ''
     
   }
@@ -59,7 +71,7 @@ const Example = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img className='thingy' src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption2} captionHeader={item.caption} />
       </CarouselItem>
     );
@@ -80,6 +92,8 @@ const Example = (props) => {
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
+
+      <div className='thingy2'>Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest</div>
 
     </div>
   );

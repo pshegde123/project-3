@@ -12,7 +12,8 @@ function App() {
       <Router>
         <div>
           <Navbar/>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/games" component={Games}/>
+          <Route exact path="/" component={Home} />
           <Route exact path="/genre" component={Genre}/>
           <Route exact path="/platforms" component={Platforms}/>
           <Route exact path="/games" component={Games}/>
