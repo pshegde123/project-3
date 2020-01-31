@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { Row,Col, CardColumns } from 'reactstrap';
+import { CardColumns } from 'reactstrap';
 import API from '../../utils/API';
 import GameCard from '../../components/GameCard';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons' 
-library.add(fab);
 
 
 class Games extends Component {
