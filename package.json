@@ -27,6 +27,7 @@
     "axios": "^0.19.2",
     "concurrently": "^5.0.2",
     "express": "^4.17.1",
+    "mdbreact": "^4.25.0",
     "mongoose": "^5.8.9",
     "react-autosuggest": "^9.4.3",
     "react-dom": "^16.12.0",
