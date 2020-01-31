@@ -6,26 +6,30 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  Button
 } from 'reactstrap';
 
 const items = [
   {
     src: 'https://media.rawg.io/media/games/0ea/0ea05d4703f3af63a570471fbad79d40.jpg',
     altText: '',
-    caption: '',
+    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption2: ''
   },
   {
     src: 'https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg',
     altText: '',
-    caption: ''
+    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption2: ''
   },
   {
     src: 'https://media.rawg.io/media/games/23d/23d78acedbb5f40c9fb64e73af5af65d.jpg',
     altText: '',
-    caption: ''
+    caption: 'Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest',
+    caption2: ''
+    
   }
 ];
+// const element = <h1>Hello, world</h1>;
 
 const Example = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -56,7 +60,7 @@ const Example = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption captionText={item.caption2} captionHeader={item.caption} />
       </CarouselItem>
     );
   });
@@ -72,24 +76,18 @@ const Example = (props) => {
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
-        <div>
-          <div>
-            <Button color="primary" size="lg">Sign Up</Button>{' '}
-          </div>
-          <div>
-            <Button color="danger" size="lg">Log In</Button>{' '}
-          </div>
-          <div>
-            <Button color="primary" size="lg">Guest</Button>{' '}
-          </div>
-        </div>
+        {}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        {/* <CarouselControl direction="next" directionText="Next" onClickHandler={next} /> */}
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
 
     </div>
   );
 }
+
+
+
+
 
 
 
