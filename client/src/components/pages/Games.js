@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { CardColumns } from 'reactstrap';
 import API from '../../utils/API';
-import GenreCard from '../../components/GenreCard';
+import GameCard from '../../components/GameCard';
+
 
 class Games extends Component {
     state = {
@@ -10,25 +11,28 @@ class Games extends Component {
 
     componentDidMount() {
         API.getAllGames().then((response) => {
-                console.log("All games:",response.data.results);
-                this.setState({ games: response.data.results })
+            this.setState({ games: response.data.results})
         })
-                .catch((error) => {
-                        console.log(error)
-                })
-}
-    render() {
-        return (
-            <CardColumns>
-                {this.state.games.map(game => <GenreCard
-                    id={game.id}
-                    name={game.name}
-                    games_count={game.games_count}
-                    image={game.background_image}
-                   />)}
-            </CardColumns>
-        )
+            .catch((error) => {
+                console.log(error)
+            })
     }
+
+
+render() {
+        return (
+        <CardColumns>
+            {this.state.games.map(game => <GameCard 
+            url={game.clip.clips.full}
+            name={game.name}
+            rating={game.rating}
+            metascore={game.metacritic}
+            users={game.added}
+            platforms={game.platforms} 
+            />)}
+        </CardColumns>
+        );
+}
 };
 
 export default Games;
