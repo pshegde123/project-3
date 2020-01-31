@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-    Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody
+    Card, Button, CardTitle, CardText, CardSubtitle, CardBody
 } from 'reactstrap';
 import ReactPlayer from 'react-player';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function GameCard(props) {
     const platforms = props.platforms;
