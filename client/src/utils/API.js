@@ -34,7 +34,7 @@ export default {
             "headers": userHeader
         })
     },
-    getPlatformGames:function(param){
+    getPlatformDetails:function(param){
         return axios({
             "method":"GET",
             "url":"https://rawg-video-games-database.p.rapidapi.com/platforms/"+param,
