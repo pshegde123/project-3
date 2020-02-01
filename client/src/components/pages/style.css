@@ -12,8 +12,10 @@
 .footer{
     color: white;
     background-color: #343A40;
-
-
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
 }
 .thingy2{
     color: white;
