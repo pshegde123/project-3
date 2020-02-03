@@ -40,5 +40,12 @@ export default {
             "url":"https://rawg-video-games-database.p.rapidapi.com/platforms/"+param,
             "headers": userHeader
         })
+    },
+    getGameDetails:function(id){
+        return axios({
+            "method":"GET",
+            "url":"https://rawg-video-games-database.p.rapidapi.com/games/"+id,
+            "headers": userHeader
+        })
     }
 };
