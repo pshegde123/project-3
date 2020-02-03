@@ -23,6 +23,7 @@ render() {
         return (
         <CardColumns>
             {this.state.games.map(game => <GameCard 
+            id={game.id}
             url={game.clip.clips.full}
             name={game.name}
             rating={game.rating}
