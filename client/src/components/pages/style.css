@@ -12,7 +12,7 @@
 .footer{
     color: white;
     background-color: #343A40;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%; 
@@ -31,3 +31,8 @@
     opacity: .9;
 
 }
+
+/* .card {
+    height: 400px;
+    width: 250px;
+} */
