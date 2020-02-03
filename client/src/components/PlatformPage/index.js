@@ -25,21 +25,7 @@ class PlatformPage extends Component {
         }).catch((error) => {
             console.log(error)
         })
-
-             //From API get available list of games for current platform id
-        /*API.getAllPlatforms().then((response) => {
-            //this.setState({ games: response.data.results})
-            const currPltResults = response.data.results;
-            const currPltDetails = currPltResults.filter(myrow => myrow.id === this.state.id);
-            console.log("results=",currPltDetails[0].games);
-            this.setState({
-                listOfPltGames : currPltDetails[0].games
-            })
-            console.log("this.state.listOfPltGame=",this.state.listOfPltGames);
-        }).catch((error) => {
-            console.log(error)
-        })*/
-        
+       
         //Get a list of games for the current platform.
         API.getAllGames().then((response) => {
             const supportedGames=[];
@@ -50,16 +36,16 @@ class PlatformPage extends Component {
                 //console.log("platformSupported=",platformSupported);
                 for (let iterPLT=0;iterPLT<platformSupported.length;iterPLT++)
                 {
+                    //console.log("current id=",platformSupported[iterPLT].platform.id);
+                    //console.log("state id=",this.state.id);
                     if(platformSupported[iterPLT].platform.id === this.state.id)
                     {
                         supportedGames.push(allGames[iter]);
-                        console.log("supportedGames=",supportedGames);
-
+                        //console.log("supportedGames=",supportedGames);
                     }
                 }
             }
             this.setState({games:supportedGames});
-
         }).catch((error) =>{
             console.log(error)
         })
