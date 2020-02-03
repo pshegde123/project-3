@@ -4,7 +4,6 @@ import {
 } from 'reactstrap';
 import ReactPlayer from 'react-player';
 
-
 function GameCard(props) {
     const platforms = props.platforms;
     const names = [];
@@ -23,7 +22,7 @@ function GameCard(props) {
                 height='250px'
                 width='400px' />
             <CardBody>
-                <CardTitle style={{ fontSize: '25px' }}>{props.name}</CardTitle>
+                <CardTitle style={{ fontSize: '25px' }}><a href={'/game/'+ props.name.replace(/\s+/g, '-').toLowerCase()+'/'+ props.id}>{props.name}</a></CardTitle>
                 <CardSubtitle><li>Ratings: {props.rating}</li><li>MetaScrore:{props.metascore}</li></CardSubtitle>
                 <CardText>
                     <li>Platforms: {names.join(" , ")}</li>
