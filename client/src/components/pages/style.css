@@ -1,3 +1,6 @@
+*{
+    font-family: 'Merriweather', serif;
+}
 .thingy {
     vertical-align: middle;
     border-style: none;
@@ -29,10 +32,27 @@
     padding-right: 150px;
     padding-left: 150px;
     opacity: .9;
-
 }
+
+.title{
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+<<<<<<< HEAD
 
 /* .card {
     height: 400px;
     width: 250px;
 } */
+=======
+.toprow{
+    margin: auto;
+}
+.backgroundImage{
+    margin: 5px;
+    width: 80%;
+    height: 340px;
+
+}
+>>>>>>> 41ff6a432fb96a965369abd51fbe2c890300e5dd
