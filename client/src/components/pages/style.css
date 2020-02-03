@@ -1,3 +1,6 @@
+*{
+    font-family: 'Merriweather', serif;
+}
 .thingy {
     vertical-align: middle;
     border-style: none;
@@ -29,5 +32,19 @@
     padding-right: 150px;
     padding-left: 150px;
     opacity: .9;
+}
+
+.title{
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.toprow{
+    margin: auto;
+}
+.backgroundImage{
+    margin: 5px;
+    width: 80%;
+    height: 340px;
 
 }
