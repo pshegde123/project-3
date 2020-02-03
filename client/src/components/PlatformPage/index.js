@@ -57,7 +57,8 @@ class PlatformPage extends Component {
                 <h3>Games for {this.state.name}</h3>
                 {ReactHtmlParser(this.state.description)}
                 <CardColumns>
-                {this.state.games.map(game => <GameCard 
+                {this.state.games.map(game => <GameCard
+                id={game.id} 
                 url={game.clip.clips.full}
                 name={game.name}
                 rating={game.rating}
