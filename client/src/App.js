@@ -6,6 +6,8 @@ import Genre from './components/pages/Genre';
 import Platforms from './components/pages/Platforms';
 import Games from './components/pages/Games';
 import Footer from './components/pages/Footer';
+import PlatformPage from './components/PlatformPage';
+import GameDetails from './components/pages/GameDetails';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/genre" component={Genre}/>
           <Route exact path="/platforms" component={Platforms}/>
           <Route exact path="/games" component={Games}/>
+          <Route  path="/platformpage/:platform" component={PlatformPage}/>
+          <Route  path="/game/:name/:id" component={GameDetails}/>
           <Footer/>
         </div>
       </Router>

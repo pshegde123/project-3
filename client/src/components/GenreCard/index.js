@@ -1,16 +1,16 @@
 import React from 'react';
 import './style.css'
 import { 
-  Card, Button, CardImg, CardTitle, CardText,   CardSubtitle, CardBody
+  Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody
 } from 'reactstrap';
 
 
-function GenreCard(props) {
+function GenreCard(props) { 
   return (
     <Card>
       <CardImg style={{ size: '50px' }} src={props.image} alt="Card image cap" />
       <CardBody>
-        <CardTitle style={{ fontSize: '25px' }}>{props.name}</CardTitle>
+        <CardTitle style={{ fontSize: '25px' }}><a href={"/platformpage/"+ props.id}>{props.name}</a></CardTitle>
         <CardSubtitle>Games count: {props.games_count}</CardSubtitle>
         <CardText>
           <li>Top Game: {props.top_one}, Users: {props.top_one_users}</li>
