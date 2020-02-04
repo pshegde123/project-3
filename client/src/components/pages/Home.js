@@ -10,7 +10,7 @@ import {
 
 const items = [
   {
-    src: 'https://media.rawg.io/media/games/0ea/0ea05d4703f3af63a570471fbad79d40.jpg',
+    src: 'https://media.rawg.io/media/games/e9c/e9cbc91e2090638ddab6ae0b3d334f90.jpg',
     altText: '',
     caption: '',
     caption2: ''
@@ -22,7 +22,7 @@ const items = [
     caption2: ''
   },
   {
-    src: 'https://media.rawg.io/media/games/e9c/e9cbc91e2090638ddab6ae0b3d334f90.jpg',
+    src: 'https://media.rawg.io/media/games/0ea/0ea05d4703f3af63a570471fbad79d40.jpg',
     altText: '',
     caption: '',
     caption2: ''
@@ -93,7 +93,7 @@ const Example = (props) => {
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
 
-      <div className='thingy2'>Hello and welcome to our GameFaqs site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest</div>
+      <div className='thingy2'>Hello and welcome to our Arcade Central site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest</div>
 
     </div>
   );
