@@ -26,7 +26,13 @@ class Navbar extends Component {
                         <li className="nav-item">
                             <a className="nav-link" href="/games">Games</a>
                         </li>
-                    </ul>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/login">Login</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/profile">Profile</a>
+                        </li>
+                       </ul>
                 </div>
                 <SearchBar/>
             </nav>
