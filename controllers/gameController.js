@@ -56,5 +56,25 @@ module.exports = {
       .then(dbGame => dbGame.remove())
       .then(dbGame => res.json(dbGame))
       .catch(err => res.status(422).json(err));
+  },
+  createDetails: function (req, res) {
+    db.SavedGames
+    .create(req.body)
+    .then(dbGame => res.json(dbGame))
+    .catch(err => res.status(422).json(err));
+  },
+  getGamesDetails: function (req, res) {
+    db.SavedGames
+    .find({})
+    .then(dbGame => {
+      //console.log("res=",dbGame);
+      return res.json(dbGame)})
+    .catch(err => res.status(422).json(err));
+  },
+  removeGamesDetails:function(req,res){
+    db.SavedGames
+    .remove({id:req.params.id})
+    .then(dbGame => res.json(dbGame))
+    .catch(err => res.status(422).json(err));
   }
 };

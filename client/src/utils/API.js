@@ -47,5 +47,15 @@ export default {
             "url":"https://rawg-video-games-database.p.rapidapi.com/games/"+id,
             "headers": userHeader
         })
+    },
+    saveGameDetails:function(gameData){
+        //console.log("gameData=",gameData);
+        return axios.post("/api/games/details",gameData);
+    },
+    getGamesDetails:function(){
+        return axios.get("/api/games/details")
+    },
+    removeGamesDetails:function(id){
+        return axios.delete("/api/games/details"+id);
     }
 };

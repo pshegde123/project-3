@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Toast, ToastBody, ToastHeader, Spinner } from 'reactstrap';
 import axios from 'axios';
 //import bcrypt from 'bcryptjs';
 import './style.css';

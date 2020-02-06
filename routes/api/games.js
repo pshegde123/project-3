@@ -10,8 +10,18 @@ router.route("/")
   .route("/login/:email")
   .get(gamesController.findOne)
 
+  router
+  .route("/details")
+  .get(gamesController.getGamesDetails)
+  .post(gamesController.createDetails);
+  
+  router
+  .route("/details:id")
+  .delete(gamesController.removeGamesDetails)
+  
+
 // Matches with "/api/games/:id"
-router
+  router  
   .route("/:id")
   .get(gamesController.findById)
   .put(gamesController.update)
