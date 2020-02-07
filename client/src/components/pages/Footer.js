@@ -8,8 +8,8 @@ const FooterPage = () => {
    
     <footer class="page-footer footer font-small blue">
 
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+      <div class="footer-copyright text-center py-3">
+    <a href="https://reactjs.org/"> Created using React</a>
       </div>
 
     </footer>
