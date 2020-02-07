@@ -1,0 +1,17 @@
+.container{
+    color: white;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+.register,.login{
+    margin: auto;
+    padding: 40px;
+    background: white;
+    color: darkcyan;
+}
+
+#exampleEmail, #examplePassword,#exampleName{
+    width:40%;
+}
