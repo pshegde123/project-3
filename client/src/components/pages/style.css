@@ -35,7 +35,7 @@
 }
 
 .title{
-    margin-top: 40px;
+    margin-top: 40px; 
     font-size: 40px;
     font-weight: bolder;
 }
@@ -47,4 +47,15 @@
     width: 80%;
     height: 340px;
 
+}
+
+.bg-info-1 {
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+
+.two {
+    color: white;
+    font-size: 40px;
+    padding-top: 15px;
 }
