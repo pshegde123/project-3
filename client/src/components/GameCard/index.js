@@ -5,7 +5,7 @@ import {
 import ReactPlayer from 'react-player';
 
 function GameCard(props) {
-    console.log("GameCard:props=",props);
+    //console.log("GameCard:props=",props);
     const platforms = props.platforms;
     const names = [];
     for (let iter = 0; iter < platforms.length; iter++) {
