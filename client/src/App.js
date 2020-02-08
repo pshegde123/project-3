@@ -23,6 +23,7 @@ class App extends Component {
             <Route exact path="/genre" component={Genre} />
             <Route exact path="/platforms" component={Platforms} />
             <Route exact path="/games" component={Games} />
+            <Route path="/games/:pageid" component={Games} />
             <Route path="/platformpage/:platform" component={PlatformPage} />
             <Route path="/game/:name/:id" component={GameDetails} />
             <Route path="/register" component={RegisterUser} />

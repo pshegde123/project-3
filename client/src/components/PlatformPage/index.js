@@ -27,7 +27,8 @@ class PlatformPage extends Component {
         })
        
         //Get a list of games for the current platform.
-        API.getAllGames().then((response) => {
+        //Currently retrieving games from only page=1 of https://api.rawg.io/api/games
+        API.getAllGames("1").then((response) => {
             const supportedGames=[];
             const allGames = response.data.results;
             //console.log("allGames=",allGames);
