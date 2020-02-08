@@ -1,17 +1,16 @@
 import React from 'react';
-import './style.css'
 import { 
   Card, CardImg, CardTitle, CardText, CardSubtitle, CardBody
 } from 'reactstrap';
 
 
-function GenreCard(props) { 
+function PCard(props) { 
 
   return (
     <Card>
       <CardImg style={{ size: '50px' }} src={props.image} alt="Card image cap" />
       <CardBody>
-        <CardTitle style={{ fontSize: '25px',color:'Orange' }}>{props.name}</CardTitle>
+        <CardTitle style={{ fontSize: '25px',color:'Orange' }}><a href={"/platformpage/"+props.id}>{props.name}</a></CardTitle>
         <CardSubtitle>Games count: {props.games_count}</CardSubtitle>
         <CardText>
           <li><a href={'/game/'+props.top_one.replace(/\s+/g, '-').toLowerCase()+'/'+ props.top_one_id}>Top One: {props.top_one}, Users: {props.top_one_users}</a></li>
@@ -23,4 +22,4 @@ function GenreCard(props) {
   );
 }
 
-export default GenreCard;
+export default PCard;

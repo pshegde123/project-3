@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { CardColumns } from 'reactstrap';
 import API from '../../utils/API';
-import GenreCard from '../../components/GenreCard';
+//import GenreCard from '../../components/GenreCard';
+import PCard from "../../components/Pcard";
 
 class Platforms extends Component {
     state = {
@@ -19,7 +20,7 @@ class Platforms extends Component {
     render() {
         return (
             <CardColumns>
-                {this.state.platforms.map(platform => <GenreCard
+                {this.state.platforms.map(platform => <PCard
                     id={platform.id}
                     name={platform.name}
                     games_count={platform.games_count}
