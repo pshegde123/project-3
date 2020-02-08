@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, CardColumns } from "reactstrap";
+import { Row, CardColumns } from "reactstrap";
 import API from "../../utils/API";
 import ProfileCard from '../ProfileCard';
 
