@@ -25,12 +25,12 @@ class GameDetails extends Component {
     }
 
     handleSubmit = () => {
-        console.log("metacritic:",this.state.metacritic);
+        //console.log("GameDetails:handleSubmit:state:",this.state);
         API.saveGameDetails({
             id: Number(this.state.id),
             name: this.state.name,
             image:this.state.imageURL,
-            metascore:this.state.metacritic
+            metascore:this.state.metacritic?this.state.metacritic:0
         }).then(res => { alert("Done!") })
             .catch(err => console.log(err))
     }
