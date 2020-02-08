@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import React from 'react';
 import './style.css'
 
 
 const FooterPage = () => {
   return (
    
-    <footer class="page-footer footer font-small blue">
+    <footer className="page-footer footer font-small blue">
 
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+      <div className="footer-copyright text-center py-3">
+    <a href="https://reactjs.org/"> Created using React</a>
       </div>
-
     </footer>
   );
 }

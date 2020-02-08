@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {  Card, CardHeader, CardBody, CardText, Row, Col, Button } from "reactstrap";
+import { Card, CardHeader, CardBody, CardText, Row, Col, Button } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import ReactHtmlParser from 'react-html-parser';
 import ReactPlayer from 'react-player';
@@ -24,11 +24,23 @@ class GameDetails extends Component {
         }));
     }
 
+    handleSubmit = () => {
+        //console.log("GameDetails:handleSubmit:state:",this.state);
+        API.saveGameDetails({
+            id: Number(this.state.id),
+            name: this.state.name,
+            image:this.state.imageURL,
+            metascore:this.state.metacritic?this.state.metacritic:0
+        }).then(res => { alert("Done!") })
+            .catch(err => console.log(err))
+    }
+
     componentDidMount() {
         const { match: { params } } = this.props;
         API.getGameDetails(params.id).then((response) => {
-            console.log("response=", response.data);
+            //console.log("response=", response.data);
             this.setState({
+                id:params.id,
                 name: response.data.name,
                 ageRating: response.data.esrb_rating,
                 metacritic: response.data.metacritic,
@@ -46,10 +58,6 @@ class GameDetails extends Component {
         }).catch((error) => {
             console.log(error)
         })
-    }
-
-    setModal() {
-
     }
 
     render() {
@@ -132,7 +140,7 @@ class GameDetails extends Component {
                         </Modal>
                     </Col>
                     <Col>
-                        <Button color="danger" size="lg" block>Add to favorite</Button>
+                        <Button color="danger" size="lg" onClick={this.handleSubmit} block>Add to favorite</Button>
                     </Col>
                 </Row>
             </div>
