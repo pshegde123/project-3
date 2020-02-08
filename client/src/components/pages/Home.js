@@ -95,6 +95,9 @@ const Example = (props) => {
 
       <div className='thingy2'>Hello and welcome to our Arcade Central site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest</div>
 
+      
+
+      <div className='thingy2'>Hello and welcome to our Arcade Central site!! Please create an account to save your data or if you have an account, log in or if your one of those boomers who doesnt want your information "out there" then continue as guest</div>
     </div>
   );
 }
