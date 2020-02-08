@@ -20,12 +20,13 @@ export default {
             "headers": userHeader
         })
     },
-    getAllGames:function(){
-        return axios({
+    getAllGames:function(page){
+        /*return axios({
             "method":"GET",
             "url":"https://rawg-video-games-database.p.rapidapi.com/games",
             "headers": userHeader
-        })
+        })*/
+        return axios.get("https://api.rawg.io/api/games?page="+page);
     },
     getAutocompleteResult:function(query){
         return axios({
