@@ -133,6 +133,15 @@ class SearchBar extends React.Component {
     });
   };
 
+  onSuggestionSelected = (event, { suggestion, suggestionValue, index, method }) => {
+    event.preventDefault();
+    console.log('ping... ', suggestion)
+    //const nameReplace = decodeURI(suggestion.name);
+    //console.log('nameReplace=',nameReplace);
+    window.location.href='/game/'+suggestion.name+'/'+suggestion.id;
+    //event.preventDefault();
+};
+
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
@@ -148,6 +157,7 @@ class SearchBar extends React.Component {
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
+        onSuggestionSelected={this.onSuggestionSelected}
         inputProps={inputProps}
         theme={theme}
       />

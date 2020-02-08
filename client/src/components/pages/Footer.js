@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import React from 'react';
 import './style.css'
 
 
@@ -11,7 +10,6 @@ const FooterPage = () => {
       <div class="footer-copyright text-center py-3">
     <a href="https://reactjs.org/"> Created using React</a>
       </div>
-
     </footer>
   );
 }
