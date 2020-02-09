@@ -47,11 +47,11 @@ const LoginUser = (props) => {
       <Form className="login" onSubmit={(e) => login(e)}>
         <FormGroup>
           <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" />
+          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" required/>
         </FormGroup>
         <FormGroup>
           <Label for="examplePassword">Password</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="Enter password" />
+          <Input type="password" name="password" id="examplePassword" placeholder="Enter password" required/>
         </FormGroup>
         <Button >Submit</Button>
       </Form>

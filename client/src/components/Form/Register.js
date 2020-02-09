@@ -11,7 +11,7 @@ function register(e){
       "password": document.getElementById("examplePassword").value
   }
   
-  console.log("adding to database:",request);
+  //console.log("adding to database:",request);
   axios.post('/api/games',request).then(resp=>{
     alert("Congratulations!!!");
     document.getElementById("exampleName").value="";
@@ -29,15 +29,15 @@ const RegisterUser = (props) => {
     <Form className="register" onSubmit={(e)=>register(e)}>
     <FormGroup>
         <Label for="userName">User Name</Label>
-        <Input type="text" name="username" id="exampleName" placeholder="Enter user name" />
+        <Input type="text" name="username" id="exampleName" placeholder="Enter user name" required/>
       </FormGroup>
       <FormGroup>
         <Label for="exampleEmail">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" />
+        <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" required/>
       </FormGroup>
       <FormGroup>
         <Label for="examplePassword">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="Enter password" />
+        <Input type="password" name="password" id="examplePassword" placeholder="Enter password" required/>
       </FormGroup>
       <Button>Submit</Button>
     </Form>
