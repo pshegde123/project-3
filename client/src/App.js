@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import RegisterUser from './components/Form/Register';
 import LoginUser from './components/Form/Login';
+import Logout from './components/Form/Logout';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Genre from './components/pages/Genre';
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/game/:name/:id" component={GameDetails} />
             <Route path="/register" component={RegisterUser} />
             <Route path="/login" component={LoginUser} />
+            <Route path="/logout" component={Logout} />
             <Route path="/profile" component={Profile} />
             <Footer />
           </div>

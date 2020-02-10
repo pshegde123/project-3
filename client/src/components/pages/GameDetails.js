@@ -30,8 +30,12 @@ class GameDetails extends Component {
             id: Number(this.state.id),
             name: this.state.name,
             image:this.state.imageURL,
-            metascore:this.state.metacritic?this.state.metacritic:0
-        }).then(res => { alert("Done!") })
+            metascore:this.state.metacritic?this.state.metacritic:0,
+            username:sessionStorage.getItem("user")?sessionStorage.getItem("user"):'Guest'
+        }).then(res => { 
+            //console.log("GameDetails:saveGameDetails res=",res);
+            alert("Done!"); 
+        })
             .catch(err => console.log(err))
     }
 
