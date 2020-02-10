@@ -50,13 +50,15 @@ export default {
         })
     },
     saveGameDetails:function(gameData){
-        //console.log("gameData=",gameData);
+        //console.log("API::saveGameDetails=",gameData);
         return axios.post("/api/games/details",gameData);
     },
-    getGamesDetails:function(){
-        return axios.get("/api/games/details")
+    getGamesDetails:function(id){
+        //console.log("API::getGamesDetails=",id);
+        return axios.get("/api/games/details"+id)
     },
-    removeGamesDetails:function(id){
-        return axios.delete("/api/games/details"+id);
+    removeGamesDetails:function(id,username){
+        //console.log("API::removeGameDetails:gameid=",id);
+        return axios.delete("/api/games/remove/details/"+id+"/"+username);
     }
 };

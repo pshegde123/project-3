@@ -26,9 +26,12 @@ class Navbar extends Component {
                         <li className="nav-item">
                             <a className="nav-link" href="/games">Games</a>
                         </li>
-                        <li className="nav-item">
+                        {sessionStorage.getItem("user")!=null && (<li className="nav-item">
+                            <a className="nav-link" href="/logout">Logout</a>
+                        </li>)}
+                        {sessionStorage.getItem("user")===null && (<li className="nav-item">
                             <a className="nav-link" href="/login">Login</a>
-                        </li>
+                        </li>)}
                         <li className="nav-item">
                             <a className="nav-link" href="/profile">Profile</a>
                         </li>

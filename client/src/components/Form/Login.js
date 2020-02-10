@@ -5,6 +5,7 @@ import axios from 'axios';
 import './style.css';
 
 function login(e) {
+
   e.preventDefault();
 
   const email = document.getElementById("exampleEmail").value;
@@ -27,6 +28,9 @@ function login(e) {
         console.log("bcrypt result=",result);
       });*/
       if(resp.data.password === password){
+        //save logged in users id to sessionStorage
+        sessionStorage.setItem("user",email);
+        
         document.getElementById("exampleEmail").value = "";
         document.getElementById("examplePassword").value = "";
         window.location.href = '/profile';
@@ -43,15 +47,15 @@ function login(e) {
 const LoginUser = (props) => {
   return (
     <div className="container">
-      <h1>Welcome to GameFAQ!</h1>
+      <h3>Welcome {sessionStorage.getItem("user")} !</h3>
       <Form className="login" onSubmit={(e) => login(e)}>
         <FormGroup>
           <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" />
+          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" required/>
         </FormGroup>
         <FormGroup>
           <Label for="examplePassword">Password</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="Enter password" />
+          <Input type="password" name="password" id="examplePassword" placeholder="Enter password" required/>
         </FormGroup>
         <Button >Submit</Button>
       </Form>

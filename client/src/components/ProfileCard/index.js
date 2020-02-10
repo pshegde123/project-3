@@ -10,7 +10,7 @@ function ProfileCard(props)
       return(
       <div>
         <Card className='savedCard'>
-          <CardImg top width="100%" src={props.image} alt="Card image cap" />
+          <CardImg className="top" src={props.image} alt="Card image cap" />
           <CardBody className='body'>
             <CardTitle className="title">{props.name}</CardTitle>
             <CardText>Meta:{props.metascore}</CardText>
