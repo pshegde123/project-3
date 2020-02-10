@@ -14,7 +14,8 @@ class Profile extends Component {
     }
 
     loadData = () => {
-        API.getGamesDetails()
+        const userid = sessionStorage.getItem("user")?sessionStorage.getItem("user"):"Guest";
+        API.getGamesDetails(userid)
             .then(response => {
                 //console.log("response=",response.data);
                 this.setState({ dbrecords: response.data});
@@ -26,8 +27,9 @@ class Profile extends Component {
         const dbrecords = this.state.dbrecords.filter(record => record.id !== id);
         this.setState({ dbrecords });    
 
-        //delete record from database
-        API.removeGamesDetails(id)
+        const username = sessionStorage.getItem("user")?sessionStorage.getItem("user"):"Guest";
+        
+        API.removeGamesDetails(id,username)
         .then(response => {
             console.log(response)
         })
@@ -39,19 +41,22 @@ class Profile extends Component {
         return (
             <div className='container-fluid text-white'>
                 <h1>Favorites</h1>
-                <Row>
-                <CardColumns>
-                    {this.state.dbrecords.map(record => 
-                    <ProfileCard 
-                    key={record.id}
-                    id={record.id}
-                    name={record.name}
-                    metascore={record.metascore}
-                    image={record.image}
-                    removeCard={this.removeCard}/>
-                    )}
-                </CardColumns>
-                </Row>
+                { this.state.dbrecords.length ==0 && (<h4 className="text-center">Add games to favorite collection</h4>)}
+                {this.state.dbrecords.length > 0 && (
+                                  <Row>
+                                  <CardColumns>
+                                      {this.state.dbrecords.map(record => 
+                                      <ProfileCard 
+                                      key={record.id}
+                                      id={record.id}
+                                      name={record.name}
+                                      metascore={record.metascore}
+                                      image={record.image}
+                                      removeCard={this.removeCard}/>
+                                      )}
+                                  </CardColumns>
+                                  </Row>
+                )}  
             </div>
         )
     }
