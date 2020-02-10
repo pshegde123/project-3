@@ -5,24 +5,36 @@ const Schema = mongoose.Schema;
 const savedGamesSchema = new Schema({
     id: {
         type: Number,
-        required:true
+        required: true
     },
     name: {
         type: String,
         required: true
     },
-    metascore:{
+    metascore: {
         type: Number,
-        required:true
+        required: true
     },
-    image:{
+    image: {
+        type: String,
+        required: true
+    },
+    username:{
         type:String,
         required:true
     },
     date: {
         type: Date,
         default: Date.now
+    },
+    // `user` is an object that stores a User id
+    // The ref property links the ObjectId to the User model
+    // This allows us to populate the saved game with an associated user
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
     }
+
 });
 
 const SavedGames = mongoose.model("SavedGame", savedGamesSchema);
