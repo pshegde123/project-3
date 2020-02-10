@@ -19,6 +19,7 @@ Check the app at [ https://reactarcadecentral.herokuapp.com/]( https://reactarca
 * [reactstrap] (https://reactstrap.github.io/) - React Bootstrap components
 * [reactplayer] (https://www.npmjs.com/package/react-player) - React Video player component
 * [React Autosuggest](https://react-autosuggest.js.org/) - React search bar auto complete component
+* [RAWG API] (https://rapidapi.com/accujazz/api/rawg-video-games-database/endpoints) - Largest open video games database API
 * [mongoose](https://mongoosejs.com/) - ORM for MongoDB
 * [MongoDB] (https://www.mongodb.com/) - Document based database
 
