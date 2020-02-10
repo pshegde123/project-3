@@ -10,7 +10,7 @@ function ProfileCard(props)
       return(
       <div>
         <Card className='savedCard'>
-          <CardImg className="top" src={props.image} alt="Card image cap" />
+          <a href={'/game/'+ props.name.replace(/\s+/g, '-').toLowerCase()+'/'+ props.id}><CardImg className="top" src={props.image} alt="Card image cap"/></a>
           <CardBody className='body'>
             <CardTitle className="title">{props.name}</CardTitle>
             <CardText>Meta:{props.metascore}</CardText>
