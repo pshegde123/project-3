@@ -41,7 +41,7 @@ class Profile extends Component {
         return (
             <div className='container-fluid text-white'>
                 <h1>Favorites</h1>
-                { this.state.dbrecords.length ==0 && (<h4 className="text-center">Add games to favorite collection</h4>)}
+                { this.state.dbrecords.length ===0 && (<h4 className="text-center">Add games to favorite collection</h4>)}
                 {this.state.dbrecords.length > 0 && (
                                   <Row>
                                   <CardColumns>
