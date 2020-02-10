@@ -29,6 +29,7 @@ mongoose.connect(
 
 // Routes
 app.use(routes);
+app.use("/games", require("./routes/api/games"));
 
 // Send every other request to the React app
 // Define any API routes before this runs
