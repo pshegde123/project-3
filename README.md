@@ -4,7 +4,8 @@
 This app is developed as project work for of Georgia Tech Coding Bootcamp.
 
 Arcade Central is a React,Node.js based web app. This app use [RAWG Video Games Database](https://rapidapi.com/accujazz/api/rawg-video-games-database/endpoints),The largest open video games database.App also allows user to search video games based on their platform, genre.
-When user clicks on games title, app displays game data such as age rating, video clips, meta score, game website, description. User can save these details in his/her profile by clicking "Add to Favorite" button.Once a game is added to user's profile, user can revisit or remove the game from profile.
+
+When user clicks on games title, app displays game data such as ratings, age rating, supporting platforms, video clips, meta score, game website, description. User can save these details in his/her profile by clicking "Add to Favorite" button.Once a game is added to user's profile, user can revisit or remove the game from profile.
 
 ![](./Capture.PNG)
 
