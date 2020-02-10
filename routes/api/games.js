@@ -13,11 +13,18 @@ router.route("/")
   router
   .route("/details")
   .get(gamesController.getGamesDetails)
-  .post(gamesController.createDetails);
+  .post(gamesController.createDetails)
+  .delete(gamesController.removeGamesDetails);
   
   router
+  .route("/remove/details/:id/:username")
+  .delete(gamesController.removeGamesDetails);
+
+  router
   .route("/details:id")
-  .delete(gamesController.removeGamesDetails)
+  .get(gamesController.getGamesDetails)
+  .post(gamesController.createDetails)
+  .delete(gamesController.removeGamesDetails);
   
 
 // Matches with "/api/games/:id"
