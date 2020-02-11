@@ -69,7 +69,7 @@ class GameDetails extends Component {
             <div className="container-fluid">
                 <Row xs="2" className="toprow text-white">
                     <Col>
-                        <h1 className="title text-warning">{this.state.name}</h1>
+                        <h1 className="two">{this.state.name}</h1>
                         <p>{this.state.userRatings ? this.state.userRatings.map(rtng => {
                             return <Button outline color="info">{rtng.title}:{rtng.count}</Button>
                         }) : null}</p>
@@ -86,7 +86,7 @@ class GameDetails extends Component {
                     </Col>
                     <Col>
                         <Card className="bg-white text-dark mb-2">
-                            <CardHeader className="bg-info">Supported Platforms</CardHeader>
+                            <CardHeader className="bg-info-1">Supported Platforms</CardHeader>
                             <CardBody>
                                 <CardText>
                                     <ul>
@@ -100,7 +100,7 @@ class GameDetails extends Component {
                             </CardBody>
                         </Card>
                         <Card className="bg-white text-dark mb-2">
-                            <CardHeader className="bg-info">#Tags</CardHeader>
+                            <CardHeader className="bg-info-1">#Tags</CardHeader>
                             <CardBody>
                                 <CardText>
                                     <ul>
@@ -114,7 +114,7 @@ class GameDetails extends Component {
                     </Col>
                     <Col>
                         <Card className="bg-white text-dark">
-                            <CardHeader className="bg-info">Ratings</CardHeader>
+                            <CardHeader className="bg-info-1">Ratings</CardHeader>
                             <CardBody>
                                 <CardText>
                                     <ul>
